@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var Metalsmith = require("metalsmith");
+var markdown = require("metalsmith-markdown");
+var templates = require("metalsmith-templates");
+var each = require("metalsmith-each");
+var iconvlite = require("iconv-lite");
+
+console.log("Generating static content using Metalsmith...");
+
+Metalsmith(__dirname + "/../")
+    .use(markdown())
+    .use(templates({
+        engine: "handlebars",
+        directory: "./templates"
+    }))
+    .destination("./public")
+    .build(function (err) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log("Metalsmith finished successfully.");
+        }
+    });

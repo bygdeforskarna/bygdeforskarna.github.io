@@ -4,11 +4,32 @@ var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
 var templates = require("metalsmith-templates");
 var each = require("metalsmith-each");
+var collections = require("metalsmith-collections");
 var iconvlite = require("iconv-lite");
 
 console.log("Generating static content using Metalsmith...");
 
-Metalsmith(__dirname + "/../")
+var metalsmith = Metalsmith(__dirname + "/../");
+
+metalsmith.use(collections({
+        blogposts: {
+            sortBy: 'date',
+            reverse: true
+        }
+    }))
+    .use(each(function (file, filename) {
+        file.url = filename.substring(0, filename.lastIndexOf("/"));
+    }))
+    .use(each(function (file, filename) {
+        if (filename == "blogg/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().blogposts.length; i++) {
+                var blogpost = metalsmith.metadata().blogposts[i];
+                content += "\n+ [" + blogpost.title + "](/" + blogpost.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+    }))
     .use(markdown())
     .use(templates({
         engine: "handlebars",

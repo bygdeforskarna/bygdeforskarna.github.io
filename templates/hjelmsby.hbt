@@ -35,8 +35,10 @@
             <li><a href="/projekt/hjelmsby">Hem</a></li>
             <li><a href="/projekt/hjelmsby/gardar">G&aring;rdar</a></li>
             <li><a href="/projekt/hjelmsby/kvarnar">Kvarnar</a></li>
-            <li><a href="/projekt/hjelmsby/personer">Personer</a></li>
+            <li><a href="/projekt/hjelmsby/torp">Torp</a></li>
             <li><a href="/projekt/hjelmsby/stugor">Stugor</a></li>
+            <li><a href="/projekt/hjelmsby/personer">Personer</a></li>
+            <li><a href="/projekt/hjelmsby/orter">Orter</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Tillbaks till Bygdeforskarna</a></li>
@@ -48,14 +50,31 @@
     <div class="container">
       {{{ contents }}}
 
-      <footer>
-        <p class="pull-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>
-          © 2015 Bygdeforskarna
-        </p>
-      </footer>
+      <div class="row">
+        <div class="col-xs-12">
+          {{#if next}}
+          <p class="pull-right">
+            <a href="/{{next.url}}">{{next.title}}</a>
+          </p>
+          {{/if}}
+          {{#if previous}}
+          <p>
+            <a href="/{{previous.url}}">{{previous.title}}</a>
+          <p/>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="row">
+        <footer class="col-xs-12">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>
+            © 2015 Bygdeforskarna
+          </p>
+        </footer>
+      </div>
     </div>
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>

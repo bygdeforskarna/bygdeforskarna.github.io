@@ -29,6 +29,60 @@ metalsmith.use(collections({
             }
             file.contents = new Buffer(content);
         }
+
+        if (filename == "projekt/hjelmsby/gardar/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_gardar.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_gardar[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+
+        if (filename == "projekt/hjelmsby/kvarnar/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_kvarnar.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_kvarnar[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+
+        if (filename == "projekt/hjelmsby/orter/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_orter.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_orter[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+
+        if (filename == "projekt/hjelmsby/personer/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_personer.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_personer[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+
+        if (filename == "projekt/hjelmsby/stugor/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_stugor.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_stugor[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
+
+        if (filename == "projekt/hjelmsby/torp/index.md") {
+            var content = file.contents.toString();
+            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_torp.length; i++) {
+                var page = metalsmith.metadata().projekt_hjelmsby_torp[i];
+                content += "\n+ [" + page.title + "](/" + page.url + ")";
+            }
+            file.contents = new Buffer(content);
+        }
     }))
     .use(markdown())
     .use(templates({

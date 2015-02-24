@@ -1,6 +1,7 @@
 ---
 title: Person 2
 template: hjelmsby.hbt
+collection: projekt_hjelmsby_personer
 ---
 Person 2
 ========

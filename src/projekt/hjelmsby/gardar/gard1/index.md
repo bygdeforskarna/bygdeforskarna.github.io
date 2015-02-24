@@ -1,6 +1,7 @@
 ---
 title: Gård 1
 template: hjelmsby.hbt
+collection: projekt_hjelmsby_gardar
 ---
 Gård 1
 ========

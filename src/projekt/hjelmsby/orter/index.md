@@ -1,6 +1,6 @@
 ---
-title: Gårdar
+title: Orter
 template: hjelmsby.hbt
 ---
-Gårdar i Hjelmsby
+Orter i Hjelmsby
 ========

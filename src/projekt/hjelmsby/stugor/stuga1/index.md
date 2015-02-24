@@ -1,6 +1,7 @@
 ---
 title: Stuga 1
 template: hjelmsby.hbt
+collection: projekt_hjelmsby_stugor
 ---
 Stuga 1
 ========

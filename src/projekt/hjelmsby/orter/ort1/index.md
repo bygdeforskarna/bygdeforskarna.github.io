@@ -1,9 +1,9 @@
 ---
-title: Person 1
+title: Ort 1
 template: hjelmsby.hbt
-collection: projekt_hjelmsby_personer
+collection: projekt_hjelmsby_orter
 ---
-Person 1
+Ort 1
 ========
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ante, molestie at gravida ac, pretium eget augue. Nulla non cursus quam. Fusce non turpis in est interdum viverra. Ut mollis pulvinar dolor at fringilla. Aliquam consectetur dui tincidunt nibh varius vestibulum. Aenean hendrerit nisl a mauris ultrices, ullamcorper blandit odio fermentum. Mauris justo justo, pellentesque ultrices varius in, posuere sit amet risus. Phasellus nibh purus, faucibus sed felis in, suscipit consectetur sapien. Vivamus bibendum finibus nisl, vel gravida diam efficitur ut. Praesent orci leo, vestibulum vel dui eget, posuere cursus risus. Morbi sit amet gravida lorem, ac hendrerit diam.
 

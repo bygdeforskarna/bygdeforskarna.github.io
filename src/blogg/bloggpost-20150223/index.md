@@ -1,6 +1,6 @@
 ---
 title: Den senaste skojiga bloggposten
-template: blogpost.hbt
+template: bygdeforskarna.hbt
 collection: blogposts
 date: 2015-02-23
 ---

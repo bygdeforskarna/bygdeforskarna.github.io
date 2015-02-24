@@ -1,6 +1,6 @@
 ---
-title: Gårdar
+title: Torp
 template: hjelmsby.hbt
 ---
-Gårdar i Hjelmsby
+Torp i Hjelmsby
 ========

@@ -1,6 +1,6 @@
 ---
 title: Den första ganska intressanta bloggposten
-template: blogpost.hbt
+template: bygdeforskarna.hbt
 collection: blogposts
 date: 2015-02-18
 ---

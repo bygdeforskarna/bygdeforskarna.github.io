@@ -1,6 +1,6 @@
 ---
 title: Hem
-template: default.hbt
+template: bygdeforskarna.hbt
 ---
 Senaste nytt
 ========

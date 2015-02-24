@@ -1,6 +1,6 @@
 ---
 title: Blogg
-template: default.hbt
+template: bygdeforskarna.hbt
 ---
 Blogg
 ========

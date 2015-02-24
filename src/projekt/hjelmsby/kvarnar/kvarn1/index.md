@@ -1,6 +1,7 @@
 ---
 title: Kvarn 1
 template: hjelmsby.hbt
+collection: projekt_hjelmsby_kvarnar
 ---
 Kvarn 1
 ========

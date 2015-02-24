@@ -47,9 +47,19 @@
       </div>
     </nav>
 
+    {{#if image}}
+    <div class="container-fluid">
+      <div class="row">
+        <img class="img-responsive" src="{{image}}" />
+      </div>
+    </div>
+    {{/if}}
     <div class="container">
-      {{{ contents }}}
-
+      <div class="row">
+        <div class="col-xs-12">
+          {{{ contents }}}
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-12">
           {{#if next}}

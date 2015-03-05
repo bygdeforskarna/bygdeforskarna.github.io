@@ -47,14 +47,36 @@
       </div>
     </nav>
 
-    {{#if image}}
-    <div class="container-fluid">
+    {{#if banner_image}}
+    <div class="container-fluid top-banner">
       <div class="row">
-        <img class="img-responsive" src="{{image}}" />
+        <img class="img-responsive" src="{{banner_image}}" />
       </div>
     </div>
     {{/if}}
-    <div class="container">
+    <div class="main-content container">
+      {{#if news1_image}}
+      <div class="row front-page-news">
+        <div class="col-xs-4 front-page-news-col">
+          <img class="img-responsive img-circle center-block" src="{{news1_image}}" alt="{{news1_image_alt}}" title="{{news1_image_title}}">
+          <h2>{{news1_title}}</h2>
+          <p>{{news1_text}}</p>
+          <a href="{{news1_link}}"><button class="btn btn-default">Mer information</button></a>
+        </div>
+        <div class="col-xs-4 front-page-news-col">
+          <img class="img-responsive img-circle center-block" src="{{news2_image}}" alt="{{news2_image_alt}}" title="{{news2_image_title}}">
+          <h2>{{news2_title}}</h2>
+          <p>{{news2_text}}</p>
+          <a href="{{news2_link}}"><button class="btn btn-default">Mer information</button></a>
+        </div>
+        <div class="col-xs-4 front-page-news-col">
+          <img class="img-responsive img-circle center-block" src="{{news3_image}}" alt="{{news3_image_alt}}" title="{{news3_image_title}}">
+          <h2>{{news3_title}}</h2>
+          <p>{{news3_text}}</p>
+          <a href="{{news3_link}}"><button class="btn btn-default">Mer information</button></a>
+        </div>
+      </div>
+      {{/if}}
       <div class="row">
         <div class="col-xs-12">
           {{{ contents }}}

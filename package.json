@@ -2,9 +2,12 @@
   "name": "bygdeforskarna",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "iojs": "1.3.x"
+  },
   "scripts": {
-    "postinstall": "bower install && node ./bin/init",
-    "start": "node ./bin/www"
+    "postinstall": "bower install && iojs ./bin/init",
+    "start": "iojs ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.10.2",
@@ -21,6 +24,8 @@
     "metalsmith-collections": "~0.7.0",
     "handlebars": "~3.0.0",
     "bower": "~1.3.12",
-    "iconv-lite": "~0.4.7"
+    "iconv-lite": "~0.4.7",
+    "jquery": "~2.1.3",
+    "jsdom": "~4.0.1"
   }
 }

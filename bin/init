@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env iojs
 
 var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
@@ -6,6 +6,8 @@ var templates = require("metalsmith-templates");
 var each = require("metalsmith-each");
 var collections = require("metalsmith-collections");
 var iconvlite = require("iconv-lite");
+var jquery = require("jquery");
+var env = require('jsdom').env;
 
 console.log("Generating static content using Metalsmith...");
 
@@ -21,7 +23,7 @@ metalsmith.use(collections({
         file.url = filename.substring(0, filename.lastIndexOf("/"));
     }))
     .use(each(function (file, filename) {
-        if (filename == "blogg/index.md") {
+        if (filename === "blogg/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().blogposts.length; i++) {
                 var blogpost = metalsmith.metadata().blogposts[i];
@@ -30,7 +32,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/gardar/index.md") {
+        if (filename === "projekt/hjelmsby/gardar/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_gardar.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_gardar[i];
@@ -39,7 +41,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/kvarnar/index.md") {
+        if (filename === "projekt/hjelmsby/kvarnar/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_kvarnar.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_kvarnar[i];
@@ -48,7 +50,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/orter/index.md") {
+        if (filename === "projekt/hjelmsby/orter/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_orter.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_orter[i];
@@ -57,7 +59,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/personer/index.md") {
+        if (filename === "projekt/hjelmsby/personer/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_personer.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_personer[i];
@@ -66,7 +68,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/stugor/index.md") {
+        if (filename === "projekt/hjelmsby/stugor/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_stugor.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_stugor[i];
@@ -75,7 +77,7 @@ metalsmith.use(collections({
             file.contents = new Buffer(content);
         }
 
-        if (filename == "projekt/hjelmsby/torp/index.md") {
+        if (filename === "projekt/hjelmsby/torp/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_torp.length; i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_torp[i];

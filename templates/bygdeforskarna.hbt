@@ -126,6 +126,10 @@
             src: "data-src-large"
           }]
         });
+
+        window.onorientationchange = function() {
+          window.location.reload();
+        };
       });
     </script>
   </body>

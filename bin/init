@@ -91,6 +91,31 @@ metalsmith.use(collections({
         engine: "handlebars",
         directory: "./templates"
     }))
+    .use(each(function (file, filename, done) {
+        env(file.contents.toString(), function (errors, window) {
+            if (errors) console.log(errors);
+            var $ = jquery(window);
+
+            $(".img-responsive-sizes").each(function (index) {
+                var img = $(this);
+                img.removeClass("img-responsive-sizes");
+                img.addClass("b-lazy");
+
+                var flickrVars = img.attr("src").split(",");
+
+                // https://farm9.staticflickr.com/8636/16449826650_b6928018bd_q.jpg
+
+                img.attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
+                img.attr("data-src-small", "https://" + flickrVars[0] + ".staticflickr.com/" + flickrVars[1] + "/" + flickrVars[2] + "_" + flickrVars[3] + "_n.jpg");
+                img.attr("data-src-medium", "https://" + flickrVars[0] + ".staticflickr.com/" + flickrVars[1] + "/" + flickrVars[2] + "_" + flickrVars[3] + "_c.jpg");
+                img.attr("data-src-large", "https://" + flickrVars[0] + ".staticflickr.com/" + flickrVars[1] + "/" + flickrVars[2] + "_" + flickrVars[4] + "_k.jpg");
+            });
+
+            file.contents = new Buffer("<html>" + $("html").html() + "</html>");
+
+            done();
+        });
+    }))
     .destination("./public")
     .build(function (err) {
         if (err) {

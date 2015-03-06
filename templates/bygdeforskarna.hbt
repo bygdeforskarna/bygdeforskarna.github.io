@@ -50,7 +50,7 @@
     {{#if banner_image}}
     <div class="container-fluid top-banner">
       <div class="row">
-        <img class="img-responsive" src="{{banner_image}}" />
+        <img class="img-responsive img-responsive-sizes" src="{{banner_image}}" />
       </div>
     </div>
     {{/if}}
@@ -111,5 +111,21 @@
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var bLazy = new Blazy({
+          breakpoints: [{
+            width: 320,
+            src: "data-src-small"
+          },{
+            width: 800,
+            src: "data-src-medium"
+          },{
+            width: 2048,
+            src: "data-src-large"
+          }]
+        });
+      });
+    </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 title: Hem
 template: bygdeforskarna.hbt
 
-banner_image: https://farm9.staticflickr.com/8636/16449826650_001557539a_o.jpg
+banner_image: farm9,8636,16449826650,b6928018bd,5f5f82ad81
 
 news1_image: https://farm9.staticflickr.com/8631/16429700977_8ef1052155_q.jpg
 news1_image_alt: Fioler på en vägg

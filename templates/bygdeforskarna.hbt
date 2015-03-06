@@ -111,6 +111,7 @@
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/blazy/blazy.min.js"></script>
     <script type="text/javascript">
       $(function () {
         var bLazy = new Blazy({

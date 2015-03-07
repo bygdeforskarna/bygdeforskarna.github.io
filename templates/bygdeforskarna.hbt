@@ -48,9 +48,11 @@
     </nav>
 
     {{#if banner_image}}
-    <div class="container-fluid top-banner">
-      <div class="row">
-        <img class="img-responsive img-responsive-sizes" src="{{banner_image}}" />
+    <div class="container-fluid big-banner">
+      <div class="row b-lazy big-banner" style="height:350px;"
+           data-src-small="https://farm8.staticflickr.com/7598/16534682177_764855628b_o.jpg"
+           data-src-medium="https://farm8.staticflickr.com/7285/16555825929_319356ee57_o.jpg"
+           data-src-large="https://farm8.staticflickr.com/7633/16554322678_919f6b2962_o.jpg">
       </div>
     </div>
     {{/if}}
@@ -116,17 +118,28 @@
       $(function () {
         var bLazy = new Blazy({
           breakpoints: [{
-            width: 500,
+            width: 320,
             src: "data-src-small"
           },{
-            width: 1024,
+            width: 768,
             src: "data-src-medium"
           },{
             width: 2048,
             src: "data-src-large"
-          }]
+          }],
+          success: function(ele){
+            console.log("TEST: " + ele);
+          },
+          error: function(ele, msg){
+            if(msg === 'missing'){
+              console.log("ERROR: Data source is missing for blazy.");
+            }
+            else if(msg === 'invalid'){
+              console.log("ERROR: Data source is invalid for blazy.");
+            }
+          }
         });
-      })();
+      });
     </script>
   </body>
 </html>

@@ -19,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -47,12 +47,9 @@
       </div>
     </nav>
 
-    {{#if banner_image}}
+    {{#if banner_image_large}}
     <div class="container-fluid big-banner">
-      <div class="row b-lazy-three-sizes big-banner" style="height:350px;"
-           data-src-small="https://farm8.staticflickr.com/7598/16534682177_764855628b_o.jpg"
-           data-src-medium="https://farm8.staticflickr.com/7285/16555825929_319356ee57_o.jpg"
-           data-src-large="https://farm8.staticflickr.com/7633/16554322678_919f6b2962_o.jpg">
+      <div class="row b-lazy-three-sizes big-banner" style="height:350px;" data-src-small="{{banner_image_small}}" data-src-medium="{{banner_image_medium}}" data-src-large="{{banner_image_large}}">
       </div>
     </div>
     {{/if}}
@@ -101,19 +98,17 @@
           {{/if}}
         </div>
       </div>
-
-      <div class="row">
-        <footer class="col-xs-12">
-          <p class="pull-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>
-            © 2015 Bygdeforskarna
-          </p>
-        </footer>
-      </div>
     </div>
-
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          © 2015 Bygdeforskarna
+        </p>
+      </div>
+    </footer>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/bower_components/blazy/blazy.min.js"></script>

@@ -111,12 +111,6 @@ metalsmith.use(collections({
                 img.attr("data-src-large", "https://" + flickrVars[0] + ".staticflickr.com/" + flickrVars[1] + "/" + flickrVars[2] + "_" + flickrVars[4] + "_k.jpg");
             });
 
-            /*$(".bg-responsive-sizes").each(function (index) {
-                var obj = $(this);
-                obj.removeClass("bg-responsive-sizes");
-                img.addClass("b-lazy");
-            });*/
-
             file.contents = new Buffer("<html>" + $("html").html() + "</html>");
 
             done();

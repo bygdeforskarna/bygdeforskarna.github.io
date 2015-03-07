@@ -17,24 +17,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <script src="/bower_components/blazy/blazy.min.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        var bLazy = new Blazy({
-          breakpoints: [{
-            width: 320,
-            src: "data-src-small"
-          },{
-            width: 800,
-            src: "data-src-medium"
-          },{
-            width: 2048,
-            src: "data-src-large"
-          }]
-        });
-      });
-    </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -129,5 +111,22 @@
 
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/blazy/blazy.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var bLazy = new Blazy({
+          breakpoints: [{
+            width: 500,
+            src: "data-src-small"
+          },{
+            width: 1024,
+            src: "data-src-medium"
+          },{
+            width: 2048,
+            src: "data-src-large"
+          }]
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -23,15 +23,6 @@ metalsmith.use(collections({
         file.url = filename.substring(0, filename.lastIndexOf("/"));
     }))
     .use(each(function (file, filename) {
-        if (filename === "blogg/index.md") {
-            var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().blogposts.length; i++) {
-                var blogpost = metalsmith.metadata().blogposts[i];
-                content += "\n+ [" + blogpost.title + "](/" + blogpost.url + ")";
-            }
-            file.contents = new Buffer(content);
-        }
-
         if (filename === "projekt/hjelmsby/gardar/index.md") {
             var content = file.contents.toString();
             for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_gardar.length; i++) {
@@ -96,6 +87,49 @@ metalsmith.use(collections({
             if (errors) console.log(errors);
             var $ = jquery(window);
 
+
+            if (filename === "blogg/index.html") {
+                $(".main-content-col").append("<hr class='row featurette-divider'>");
+
+                var archive = $("<div class='list-group'></div>");
+
+                for (var i=0; i<metalsmith.metadata().blogposts.length; i++) {
+                    var blogpost = metalsmith.metadata().blogposts[i];
+
+                    if (i<3) {
+                        var featurette = $("<div class='row featurette'></div>");
+                        var textCol = $("<div class='col-md-7'></div>");
+                        textCol.append($("<h2 class='featurette-heading'>" + blogpost.title + "</h2>"));
+                        textCol.append($("<p class='lead'>" + blogpost.summary + "</p>"));
+                        textCol.append($("<a href='/" + blogpost.url + "'><button class='btn btn-default'>Läs mer</button></a>"));
+                        var imgCol = $("<div class='col-md-5'></div>");
+                        imgCol.append($("<img class='img-responsive b-lazy-one-size thumbnail' src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' data-src='" + blogpost.image + "' alt='" + blogpost.image_title + "' title='" + blogpost.image_alt + "'>"));
+
+                        if (i%2) {
+                            featurette.append(textCol);
+                            featurette.append(imgCol);
+                        } else {
+                            featurette.append(imgCol);
+                            featurette.append(textCol);
+                        }
+
+                        $(".main-content-col").append(featurette);
+
+                        $(".main-content-col").append("<hr class='row featurette-divider'>");
+                    }
+
+                    archive.append($("<a class='list-group-item' href='/" + blogpost.url + "'>" + formatDateString(blogpost.date) +
+                                     " - " + blogpost.title + "</a>"));
+                }
+
+                var archive
+                $(".main-content-col")
+                    .append($("<div class='row'></div>")
+                        .append($("<div class='col-md-6'></div>")
+                            .append($("<h2>Arkiv</h2>"))
+                            .append(archive)));
+            }
+
             $(".img-responsive-sizes").each(function (index) {
                 var img = $(this);
                 img.removeClass("img-responsive-sizes");
@@ -125,3 +159,12 @@ metalsmith.use(collections({
             console.log("Metalsmith finished successfully.");
         }
     });
+
+function formatDateString(date) {
+    return date.getFullYear() + "-" + pad(date.getMonth()+1, 2) + "-" + pad(date.getDate(), 2);
+}
+
+function pad(num, size) {
+    var s = "000000000" + num;
+    return s.substr(s.length-size);
+}

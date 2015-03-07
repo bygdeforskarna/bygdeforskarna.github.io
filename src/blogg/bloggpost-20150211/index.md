@@ -1,14 +1,14 @@
 ---
-title: Den senaste skojiga bloggposten
+title: Den nästäldsta bloggposten
 summary: Bla bla bla, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non maximus est. Morbi ultricies nibh at sodales mollis.
-image: https://farm9.staticflickr.com/8631/16429700977_8ef1052155.jpg
-image_title: Musikinstrument på en vägg.
-image_alt: En gitarr, en fiol och en ukulele som hänger på en vägg.
+image: https://farm9.staticflickr.com/8663/16449590040_135bb7dcf3.jpg
+image_title: Stayin Alive-gubbe
+image_alt: En gubbe som gör dansen till Stayin Alive.
 template: bygdeforskarna.hbt
 collection: blogposts
-date: 2015-02-23
+date: 2015-02-11
 ---
-Den senaste skojiga bloggposten
+Den nästäldsta bloggposten
 =============
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non maximus est. Morbi ultricies nibh at sodales mollis. Nunc consequat volutpat lectus, vel efficitur tellus molestie eget. Donec eget ipsum eu ex cursus scelerisque dictum sed massa. Nulla tempus suscipit tortor non maximus. Praesent sit amet nunc velit. Sed ullamcorper finibus lectus, sit amet fermentum justo consequat eget. Integer et elit in leo egestas ultrices id vitae sapien. Curabitur eu scelerisque mi. Proin non mollis massa, et vehicula nibh. Nunc varius pretium dolor, scelerisque fringilla dui hendrerit sed. Phasellus congue, felis vestibulum faucibus pulvinar, orci odio elementum tellus, id fringilla nisi felis vel metus. Quisque posuere placerat nulla ac posuere. Morbi euismod nec purus nec tristique.
 

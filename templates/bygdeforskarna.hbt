@@ -60,19 +60,19 @@
       {{#if news1_image}}
       <div class="row front-page-news">
         <div class="col-md-4 col-xs-12 front-page-news-col text-center">
-          <img class="img-responsive img-circle center-block" src="{{news1_image}}" alt="{{news1_image_alt}}" title="{{news1_image_title}}">
+          <img class="img-responsive img-circle center-block b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src-large="{{news1_image}}" alt="{{news1_image_alt}}" title="{{news1_image_title}}">
           <h2>{{news1_title}}</h2>
           <p class="text-center">{{news1_text}}</p>
           <a href="{{news1_link}}"><button class="btn btn-default">Mer information</button></a>
         </div>
         <div class="col-md-4 col-xs-12 front-page-news-col text-center">
-          <img class="img-responsive img-circle center-block" src="{{news2_image}}" alt="{{news2_image_alt}}" title="{{news2_image_title}}">
+          <img class="img-responsive img-circle center-block b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src-large="{{news2_image}}" alt="{{news2_image_alt}}" title="{{news2_image_title}}">
           <h2>{{news2_title}}</h2>
           <p class="text-center">{{news2_text}}</p>
           <a href="{{news2_link}}"><button class="btn btn-default">Mer information</button></a>
         </div>
         <div class="col-md-4 col-xs-12 front-page-news-col text-center">
-          <img class="img-responsive img-circle center-block" src="{{news3_image}}" alt="{{news3_image_alt}}" title="{{news3_image_title}}">
+          <img class="img-responsive img-circle center-block b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src-large="{{news3_image}}" alt="{{news3_image_alt}}" title="{{news3_image_title}}">
           <h2>{{news3_title}}</h2>
           <p class="text-center">{{news3_text}}</p>
           <a href="{{news3_link}}"><button class="btn btn-default">Mer information</button></a>

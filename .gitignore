@@ -1,4 +1,5 @@
 .DS_Store
-bower_components
-node_modules
-public
+source/bower_components
+source/node_modules
+*
+!source

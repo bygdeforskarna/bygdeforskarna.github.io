@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require("stylus").middleware({
-    src: __dirname + "/stylus/",
-    dest: __dirname + "/public/"
+    src: __dirname + "/../stylus/",
+    dest: __dirname + "/../"
   }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/bower_components", express.static(path.join(__dirname, "/bower_components")));

@@ -1,6 +1,6 @@
 ---
 title: Hem
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 
 banner_image: farm9,8636,16449826650,b6928018bd,5f5f82ad81
 banner_image_large: https://farm8.staticflickr.com/7633/16554322678_919f6b2962_o.jpg

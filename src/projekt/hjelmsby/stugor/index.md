@@ -1,6 +1,6 @@
 ---
 title: Stugor
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Stugor i Hjelmsby
 ========

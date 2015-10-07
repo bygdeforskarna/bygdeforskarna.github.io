@@ -1,6 +1,6 @@
 ---
 title: Ort 2
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 collection: projekt_hjelmsby_orter
 ---
 Ort 2

@@ -1,6 +1,6 @@
 ---
 title: Torp 2
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 collection: projekt_hjelmsby_torp
 ---
 Torp 2

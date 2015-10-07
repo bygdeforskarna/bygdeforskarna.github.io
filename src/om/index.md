@@ -1,6 +1,6 @@
 ---
 title: Om oss
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 ---
 Om oss
 ========

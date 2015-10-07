@@ -4,7 +4,7 @@ summary: Bla bla bla, Lorem ipsum dolor sit amet, consectetur adipiscing elit. D
 image: https://farm9.staticflickr.com/8631/16429700977_8ef1052155.jpg
 image_title: Musikinstrument på en vägg.
 image_alt: En gitarr, en fiol och en ukulele som hänger på en vägg.
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 collection: blogposts
 date: 2015-02-14
 ---

@@ -1,26 +1,32 @@
-#!/usr/bin/env iojs
+#!/usr/bin/env node
 
 var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
-var templates = require("metalsmith-templates");
+var layouts = require("metalsmith-layouts");
 var each = require("metalsmith-each");
 var collections = require("metalsmith-collections");
 var iconvlite = require("iconv-lite");
 var jquery = require("jquery");
-var env = require('jsdom').env;
+var env = require("jsdom").env;
 
 console.log("Generating static content using Metalsmith...");
 
 var metalsmith = Metalsmith(__dirname + "/../");
 
-metalsmith.use(collections({
+metalsmith
+    .clean(false)
+    .use(collections({
         blogposts: {
             sortBy: 'date',
             reverse: true
         }
     }))
     .use(each(function (file, filename) {
-        file.url = filename.substring(0, filename.lastIndexOf("/"));
+        var urlDelimiter = "/";
+        if (filename.lastIndexOf("/") == -1) { // Shiiieeeet, we are on Windows or similar.
+            urlDelimiter = "\\";
+        }
+        file.url = filename.substring(0, filename.lastIndexOf(urlDelimiter));
     }))
     .use(each(function (file, filename) {
         if (filename === "projekt/hjelmsby/gardar/index.md") {
@@ -78,9 +84,8 @@ metalsmith.use(collections({
         }
     }))
     .use(markdown())
-    .use(templates({
-        engine: "handlebars",
-        directory: "./templates"
+    .use(layouts({
+        engine: "handlebars"
     }))
     .use(each(function (file, filename, done) {
         env(file.contents.toString(), function (errors, window) {

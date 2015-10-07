@@ -1,6 +1,6 @@
 ---
 title: Torp
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Torp i Hjelmsby
 ========

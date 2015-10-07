@@ -1,6 +1,6 @@
 ---
 title: Orter
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Orter i Hjelmsby
 ========

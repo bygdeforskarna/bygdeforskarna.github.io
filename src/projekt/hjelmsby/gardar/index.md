@@ -1,6 +1,6 @@
 ---
 title: Gårdar
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Gårdar i Hjelmsby
 ========

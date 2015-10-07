@@ -1,6 +1,6 @@
 ---
 title: Gård 2
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 collection: projekt_hjelmsby_gardar
 ---
 Gård 2

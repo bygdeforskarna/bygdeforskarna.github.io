@@ -1,6 +1,6 @@
 ---
 title: Kontakta oss
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 ---
 Kontakta oss
 ========

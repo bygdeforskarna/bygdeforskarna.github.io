@@ -1,6 +1,6 @@
 ---
 title: Om
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Hjelmsby
 ========

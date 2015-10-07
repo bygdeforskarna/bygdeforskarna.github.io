@@ -4,7 +4,7 @@ summary: Bla bla bla, Lorem ipsum dolor sit amet, consectetur adipiscing elit. D
 image: https://farm9.staticflickr.com/8663/16449590040_135bb7dcf3.jpg
 image_title: Stayin Alive-gubbe
 image_alt: En gubbe som gör dansen till Stayin Alive.
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 collection: blogposts
 date: 2015-02-21
 ---

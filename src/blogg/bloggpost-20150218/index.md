@@ -4,7 +4,7 @@ summary: Bla bla bla, Lorem ipsum dolor sit amet, consectetur adipiscing elit. D
 image: https://farm9.staticflickr.com/8623/16449412778_05d764f0cb.jpg
 image_title: Ballonger ovanför spegel.
 image_alt: Två rosa ballonger som hänger ovanför en spegel.
-template: bygdeforskarna.hbt
+layout: bygdeforskarna.hbt
 collection: blogposts
 date: 2015-02-18
 ---

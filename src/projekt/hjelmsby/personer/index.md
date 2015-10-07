@@ -1,6 +1,6 @@
 ---
 title: Personer
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Personer i Hjelmsby
 ========

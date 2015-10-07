@@ -1,6 +1,6 @@
 ---
 title: Person 2
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 collection: projekt_hjelmsby_personer
 ---
 Person 2

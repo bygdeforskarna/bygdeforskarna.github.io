@@ -1,6 +1,6 @@
 ---
 title: Kvarnar
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 ---
 Kvarnar i Hjelmsby
 ========

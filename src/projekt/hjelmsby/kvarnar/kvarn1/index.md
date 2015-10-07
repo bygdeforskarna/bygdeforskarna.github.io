@@ -1,6 +1,6 @@
 ---
 title: Kvarn 1
-template: hjelmsby.hbt
+layout: hjelmsby.hbt
 collection: projekt_hjelmsby_kvarnar
 ---
 Kvarn 1

@@ -17,7 +17,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,13 +30,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="/projekt/hjelmsby">Hem</a></li>
-            <li><a href="/projekt/hjelmsby/gardar">Gårdar</a></li>
             <li><a href="/projekt/hjelmsby/kvarnar">Kvarnar</a></li>
-            <li><a href="/projekt/hjelmsby/torp">Torp</a></li>
-            <li><a href="/projekt/hjelmsby/stugor">Stugor</a></li>
-            <li><a href="/projekt/hjelmsby/personer">Personer</a></li>
-            <li><a href="/projekt/hjelmsby/orter">Orter</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Tillbaks till Bygdeforskarna</a></li>
@@ -45,29 +39,54 @@
       </div>
     </nav>
 
-    <div class="container">
-      <h1 id="hjelmsby">Hjelmsby</h1>
-<p>Projektet kring Hjelmsby började 2012 med att bla bla bla. Vi har tittat på stugor, kvarnar, osv. bla bla.</p>
+    <div class="front-page banner b-lazy-three-sizes" data-src="https://farm1.staticflickr.com/621/22096521685_df046174c1_o.jpg" data-src-medium="https://farm1.staticflickr.com/577/21475626963_6754854488_o.jpg" data-src-small="https://farm1.staticflickr.com/693/21908893108_a98ebc3c33_o.jpg"></div>
+    <div class="main-content container">
+      <div class="row">
+        <div class="col-xs-12 main-content-col">
+          <h1 id="hjelmsby">Hjelmsby</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac consequat eros, eget tincidunt libero. Vivamus volutpat convallis magna sit amet porttitor. Fusce auctor fringilla enim, vitae ultrices enim pellentesque sit amet. Mauris hendrerit eget eros ut hendrerit. Donec nec ipsum eros. Nullam molestie, velit ac varius interdum, enim lectus cursus orci, a efficitur ipsum velit eu nisi. Donec dignissim justo ac lacus gravida, hendrerit feugiat nisi luctus.</p>
+<p>Nunc consequat metus at dictum auctor. Integer id nisi bibendum, condimentum sapien et, ullamcorper massa. Nulla semper dignissim nisi, id vulputate tortor vulputate et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam fringilla magna vel varius cursus. Nunc congue augue lacus, eu porta massa vehicula eget. Phasellus nibh neque, gravida nec leo molestie, venenatis elementum nulla. Morbi placerat condimentum massa, et ornare massa. Donec laoreet, libero eget vulputate volutpat, erat ipsum luctus ipsum, sed rhoncus metus lacus nec nulla. Phasellus in diam eros. Morbi tempor ullamcorper massa, ut tempus urna sollicitudin id. Suspendisse scelerisque fermentum elit eu eleifend. Vivamus est augue, aliquam at aliquam sit amet, aliquet vitae enim.</p>
+<p>Sed id fermentum erat. Suspendisse potenti. Aliquam eleifend quis libero viverra commodo. Cras congue tempor eros in bibendum. Cras lectus leo, mollis ut nisi sed, consectetur sollicitudin felis. Cras venenatis dolor felis, ut tincidunt turpis rutrum eget. Maecenas aliquet ornare turpis, non feugiat ipsum.</p>
+<p>Nullam scelerisque interdum arcu. Nunc placerat elementum gravida. Vestibulum sit amet risus lorem. Mauris mattis semper dolor ut dapibus. Aliquam efficitur lobortis velit eu molestie. Suspendisse tempus nunc vitae elementum dignissim. Curabitur consectetur nunc suscipit risus suscipit, eget varius mi feugiat.</p>
+<p>Donec non ante vel tortor blandit aliquet vel quis orci. Nam et ligula arcu. Morbi iaculis nisl nec lacus rhoncus ultricies. Praesent dictum elementum lectus eu feugiat. Sed sed ligula pharetra, pulvinar orci non, viverra ligula. Nam ac orci finibus, accumsan nisi vel, sollicitudin nibh. Cras faucibus massa libero, non iaculis tellus blandit id. Mauris eget arcu sit amet elit gravida auctor. Fusce porttitor vestibulum tincidunt. Cras accumsan sapien et cursus sagittis. Nam porta metus vitae neque porttitor malesuada. Donec vestibulum sed leo ac mollis. Nullam interdum lorem eu nisi sodales, tincidunt ultrices est consectetur.</p>
 
-
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-12">
         </div>
       </div>
-
-      <div class="row">
-        <footer class="col-xs-12">
-          <p class="pull-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>
-            © 2015 Bygdeforskarna
-          </p>
-        </footer>
-      </div>
     </div>
-
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          © 2015 Bygdeforskarna
+        </p>
+      </div>
+    </footer>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/blazy/blazy.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var bLazy3 = new Blazy({
+          selector: ".b-lazy-three-sizes",
+          breakpoints: [{
+            width: 420,
+            src: "data-src-small"
+          },{
+            width: 768,
+            src: "data-src-medium"
+          }]
+        });
+        var bLazy1 = new Blazy({
+          selector: ".b-lazy-one-size"
+        });
+      });
+    </script>
   
+
 </body></html>

@@ -19,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,13 +32,24 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="/projekt/hjelmsby">Hem</a></li>
+            {{#if navbar.projekt.hjelmsby.gardar}}
             <li><a href="/projekt/hjelmsby/gardar">G&aring;rdar</a></li>
+            {{/if}}
+            {{#if navbar.projekt.hjelmsby.kvarnar}}
             <li><a href="/projekt/hjelmsby/kvarnar">Kvarnar</a></li>
+            {{/if}}
+            {{#if navbar.projekt.hjelmsby.torp}}
             <li><a href="/projekt/hjelmsby/torp">Torp</a></li>
+            {{/if}}
+            {{#if navbar.projekt.hjelmsby.stugor}}
             <li><a href="/projekt/hjelmsby/stugor">Stugor</a></li>
+            {{/if}}
+            {{#if navbar.projekt.hjelmsby.personer}}
             <li><a href="/projekt/hjelmsby/personer">Personer</a></li>
+            {{/if}}
+            {{#if navbar.projekt.hjelmsby.orter}}
             <li><a href="/projekt/hjelmsby/orter">Orter</a></li>
+            {{/if}}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Tillbaks till Bygdeforskarna</a></li>
@@ -47,9 +58,15 @@
       </div>
     </nav>
 
-    <div class="container">
-      {{{ contents }}}
-
+    {{#if banner_image_large}}
+    <div class="front-page banner b-lazy-three-sizes" data-src="{{banner_image_large}}" data-src-medium="{{banner_image_medium}}" data-src-small="{{banner_image_small}}"></div>
+    {{/if}}
+    <div class="main-content container">
+      <div class="row">
+        <div class="col-xs-12 main-content-col">
+          {{{ contents }}}
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-12">
           {{#if next}}
@@ -64,20 +81,36 @@
           {{/if}}
         </div>
       </div>
-
-      <div class="row">
-        <footer class="col-xs-12">
-          <p class="pull-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>
-            © 2015 Bygdeforskarna
-          </p>
-        </footer>
-      </div>
     </div>
-
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          © 2015 Bygdeforskarna
+        </p>
+      </div>
+    </footer>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/blazy/blazy.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var bLazy3 = new Blazy({
+          selector: ".b-lazy-three-sizes",
+          breakpoints: [{
+            width: 420,
+            src: "data-src-small"
+          },{
+            width: 768,
+            src: "data-src-medium"
+          }]
+        });
+        var bLazy1 = new Blazy({
+          selector: ".b-lazy-one-size"
+        });
+      });
+    </script>
   </body>
 </html>

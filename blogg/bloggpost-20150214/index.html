@@ -17,7 +17,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,10 +30,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/">Hem</a></li>
             <li><a href="/om">Om</a></li>
             <li><a href="/kontakt">Kontakt</a></li>
-            <li><a href="/blogg">Blogg</a></li>
+            <li class="active"><a href="/blogg">Blogg</a></li>
             <li><a href="/projekt/hjelmsby">Hjelmsby</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -81,14 +80,11 @@
         var bLazy3 = new Blazy({
           selector: ".b-lazy-three-sizes",
           breakpoints: [{
-            width: 320,
+            width: 420,
             src: "data-src-small"
           },{
             width: 768,
             src: "data-src-medium"
-          },{
-            width: 2048,
-            src: "data-src-large"
           }]
         });
         var bLazy1 = new Blazy({

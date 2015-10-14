@@ -1,9 +1,22 @@
-body {
-  padding-top: 50px;
+/* Banner images
+-------------------------------------------------- */
+.banner {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 40px;
 }
+/* Stuff
+-------------------------------------------------- */
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+.navbar {
+  margin-bottom: 0;
 }
 p {
   text-align: justify;
@@ -18,16 +31,19 @@ img[class~=pull-left] {
   margin: 0px 0px 40px 0px;
 }
 .front-page-news {
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 0 0;
 }
 .front-page-news-col {
-  padding: 20px 40px;
+  padding: 40px 40px;
 }
 .big-banner {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 0 40px 0;
   padding: 0;
+}
+.main-content {
+  margin-bottom: 100px;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -45,7 +61,7 @@ body {
   width: 100%;
 /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #e7e7e7;
+  background-color: #f8f8f8;
 }
 footer .container p {
   margin: 20px 0;
@@ -67,9 +83,15 @@ footer .container p {
   .featurette-heading {
     font-size: 50px;
   }
+  .banner {
+    height: 460px;
+  }
 }
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 60px;
+  }
+  .banner {
+    height: 550px;
   }
 }

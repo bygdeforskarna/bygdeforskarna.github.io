@@ -3,6 +3,7 @@
 var Metalsmith = require("metalsmith");
 var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
+var inPlace = require("metalsmith-in-place");
 var each = require("metalsmith-each");
 var collections = require("metalsmith-collections");
 var iconvlite = require("iconv-lite");
@@ -29,56 +30,73 @@ metalsmith
             urlDelimiter = "\\";
         }
         file.url = filename.substring(0, filename.lastIndexOf(urlDelimiter));
+        file.navbar = {
+            about: filename.lastIndexOf("om") != -1,
+            contact: filename.lastIndexOf("kontakt") != -1,
+            blog: filename.lastIndexOf("blogg") != -1,
+            hjelmsby: filename.lastIndexOf("hjelmsby") != -1,
+            kvarnar: filename.lastIndexOf("kvarnar") != -1,
+            projekt: {
+                hjelmsby: {
+                    gardar: metalsmith.metadata().projekt_hjelmsby_gardar && metalsmith.metadata().projekt_hjelmsby_gardar.length > 0,
+                    kvarnar: metalsmith.metadata().projekt_hjelmsby_kvarnar && metalsmith.metadata().projekt_hjelmsby_kvarnar.length > 0,
+                    torp: metalsmith.metadata().projekt_hjelmsby_torp && metalsmith.metadata().projekt_hjelmsby_torp.length > 0,
+                    stugor: metalsmith.metadata().projekt_hjelmsby_stugor && metalsmith.metadata().projekt_hjelmsby_stugor.length > 0,
+                    personer: metalsmith.metadata().projekt_hjelmsby_personer && metalsmith.metadata().projekt_hjelmsby_personer.length > 0,
+                    orter: metalsmith.metadata().projekt_hjelmsby_orter && metalsmith.metadata().projekt_hjelmsby_orter.length > 0
+                }
+            }
+        };
     }))
     .use(each(function (file, filename) {
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/gardar/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/gardar/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_gardar.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_gardar ? metalsmith.metadata().projekt_hjelmsby_gardar.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_gardar[i];
                 content += "\n+ [" + page.title + "](/" + page.url + ")";
             }
             file.contents = new Buffer(content);
         }
 
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/kvarnar/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/kvarnar/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_kvarnar.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_kvarnar ? metalsmith.metadata().projekt_hjelmsby_kvarnar.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_kvarnar[i];
-                content += "\n+ [" + page.title + "](/" + page.url + ")";
+                content += "\n<div class='col-md-4 col-xs-12'><h2>" + page.title + "</h2><a href='" + page.url + "'><button>L&auml;s mer</button></a></div>";
             }
             file.contents = new Buffer(content);
         }
 
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/orter/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/orter/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_orter.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_orter ? metalsmith.metadata().projekt_hjelmsby_orter.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_orter[i];
                 content += "\n+ [" + page.title + "](/" + page.url + ")";
             }
             file.contents = new Buffer(content);
         }
 
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/personer/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/personer/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_personer.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_personer ? metalsmith.metadata().projekt_hjelmsby_personer.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_personer[i];
                 content += "\n+ [" + page.title + "](/" + page.url + ")";
             }
             file.contents = new Buffer(content);
         }
 
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/stugor/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/stugor/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_stugor.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_stugor ? metalsmith.metadata().projekt_hjelmsby_stugor.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_stugor[i];
                 content += "\n+ [" + page.title + "](/" + page.url + ")";
             }
             file.contents = new Buffer(content);
         }
 
-        if (fixWindowsFilename(filename) === "projekt/hjelmsby/torp/index.md") {
+        if (fixWindowsFilename(filename) === "projekt/hjelmsby/torp/index.html") {
             var content = file.contents.toString();
-            for (var i=0; i<metalsmith.metadata().projekt_hjelmsby_torp.length; i++) {
+            for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_torp ? metalsmith.metadata().projekt_hjelmsby_torp.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_torp[i];
                 content += "\n+ [" + page.title + "](/" + page.url + ")";
             }
@@ -87,6 +105,9 @@ metalsmith
     }))
     .use(markdown())
     .use(layouts({
+        engine: "handlebars"
+    }))
+    .use(inPlace({
         engine: "handlebars"
     }))
     .use(each(function (file, filename, done) {

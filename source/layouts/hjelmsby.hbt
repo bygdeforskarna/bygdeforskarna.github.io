@@ -7,7 +7,7 @@
     <title>Hjelmsby - {{ title }}</title>
 
     <!-- Bootstrap -->
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="/css/main.css" rel="stylesheet">
 
@@ -92,9 +92,9 @@
         </p>
       </div>
     </footer>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/bower_components/blazy/blazy.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/blazy/1.4.1/blazy.min.js"></script>
     <script type="text/javascript">
       $(function () {
         var bLazy3 = new Blazy({

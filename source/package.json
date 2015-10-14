@@ -24,7 +24,6 @@
     "metalsmith-each": "^0.1.1",
     "metalsmith-collections": "^0.7.0",
     "handlebars": "^4.0.3",
-    "bower": "^1.5.3",
     "iconv-lite": "^0.4.13",
     "jquery": "^2.1.3",
     "jsdom": "^6.5.1"

@@ -1,5 +1,5 @@
 ---
-title: Om
+title: Hjelmsby
 layout: hjelmsby.hbt
 
 banner_image_large: https://farm1.staticflickr.com/621/22096521685_df046174c1_o.jpg

@@ -126,7 +126,7 @@ metalsmith
 
                     if (i<3) {
                         var featurette = $("<div class='row featurette'></div>");
-                        var textCol = $("<div class='col-md-7'></div>");
+                        var textCol = $("<div class='col-md-7 featurette-text-box'></div>");
                         textCol.append($("<h2 class='featurette-heading'>" + blogpost.title + "</h2>"));
                         textCol.append($("<p class='lead'>" + blogpost.summary + "</p>"));
                         textCol.append($("<a href='/" + blogpost.url + "'><button class='btn btn-default'>Läs mer</button></a>"));

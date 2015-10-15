@@ -2,6 +2,11 @@
 title: Kvarn 1
 layout: hjelmsby.hbt
 collection: projekt_hjelmsby_kvarnar
+
+image: https://farm9.staticflickr.com/8631/16429700977_8ef1052155_n.jpg
+image_alt: En gitarr, en fiol och en ukulele som hänger på en vägg.
+image_title: Fioler på en vägg
+text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci quam, iaculis eget urna in, molestie dignissim ipsum. Ut erat est, egestas ac libero eu, viverra elementum nisl.
 ---
 Kvarn 1
 ========

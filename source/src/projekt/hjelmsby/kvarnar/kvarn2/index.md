@@ -2,6 +2,11 @@
 title: Kvarn 2
 layout: hjelmsby.hbt
 collection: projekt_hjelmsby_kvarnar
+
+image: https://farm9.staticflickr.com/8663/16449590040_135bb7dcf3_n.jpg
+image_alt: Gubbe som gör staying alive-dansen.
+image_title: Staying Alive-gubbe
+text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci quam, iaculis eget urna in, molestie dignissim ipsum. Ut erat est, egestas ac libero eu, viverra elementum nisl.
 ---
 Kvarn 2
 ========

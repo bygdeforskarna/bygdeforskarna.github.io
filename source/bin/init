@@ -29,7 +29,7 @@ metalsmith
         if (filename.lastIndexOf("/") == -1) { // Shiiieeeet, we are on Windows or similar.
             urlDelimiter = "\\";
         }
-        file.url = filename.substring(0, filename.lastIndexOf(urlDelimiter));
+        file.url = "/" + fixWindowsFilename(filename.substring(0, filename.lastIndexOf(urlDelimiter)));
         file.navbar = {
             about: filename.lastIndexOf("om") != -1,
             contact: filename.lastIndexOf("kontakt") != -1,
@@ -59,11 +59,18 @@ metalsmith
         }
 
         if (fixWindowsFilename(filename) === "projekt/hjelmsby/kvarnar/index.html") {
-            var content = file.contents.toString();
+            var content = file.contents.toString() + "<br /><div class='row fancy-item-gallery'>";
             for (var i=0; i<(metalsmith.metadata().projekt_hjelmsby_kvarnar ? metalsmith.metadata().projekt_hjelmsby_kvarnar.length : 0); i++) {
                 var page = metalsmith.metadata().projekt_hjelmsby_kvarnar[i];
-                content += "\n<div class='col-md-4 col-xs-12'><h2>" + page.title + "</h2><a href='" + page.url + "'><button>L&auml;s mer</button></a></div>";
+                content += "\n<div class='col-md-4 col-xs-12 fancy-item'>\n" +
+                  "<img class='img-responsive thumbnail center-block b-lazy-one-size' src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='\n" +
+                       "data-src='" + page.image + "' alt='" + page.image_alt + "' title='" + page.image_title + "'>\n" +
+                  "<h2>" + page.title + "</h2>\n" +
+                  "<p>" + page.text + "</p>\n" +
+                  "<a href='" + page.url + "'><button class='btn btn-default'>Mer information</button></a>\n" +
+                "</div>\n";
             }
+            content += "</div>";
             file.contents = new Buffer(content);
         }
 

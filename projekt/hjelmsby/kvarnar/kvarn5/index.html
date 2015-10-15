@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hjelmsby - {{ title }}</title>
+    <title>Hjelmsby - Kvarn 5</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -32,28 +30,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            {{#if navbar.projekt.hjelmsby.gardar}}
-            <li><a href="/projekt/hjelmsby/gardar">G&aring;rdar</a></li>
-            {{/if}}
-            {{#if navbar.projekt.hjelmsby.kvarnar}}
-                {{#if navbar.kvarnar}}
             <li class="active"><a href="/projekt/hjelmsby/kvarnar">Kvarnar</a></li>
-                {{else}}
-            <li><a href="/projekt/hjelmsby/kvarnar">Kvarnar</a></li>
-                {{/if}}
-            {{/if}}
-            {{#if navbar.projekt.hjelmsby.torp}}
-            <li><a href="/projekt/hjelmsby/torp">Torp</a></li>
-            {{/if}}
-            {{#if navbar.projekt.hjelmsby.stugor}}
-            <li><a href="/projekt/hjelmsby/stugor">Stugor</a></li>
-            {{/if}}
-            {{#if navbar.projekt.hjelmsby.personer}}
-            <li><a href="/projekt/hjelmsby/personer">Personer</a></li>
-            {{/if}}
-            {{#if navbar.projekt.hjelmsby.orter}}
-            <li><a href="/projekt/hjelmsby/orter">Orter</a></li>
-            {{/if}}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Tillbaks till Bygdeforskarna</a></li>
@@ -62,28 +39,24 @@
       </div>
     </nav>
 
-    {{#if banner_image_large}}
-    <div class="front-page banner b-lazy-three-sizes" data-src="{{banner_image_large}}" data-src-medium="{{banner_image_medium}}" data-src-small="{{banner_image_small}}"></div>
-    {{/if}}
     <div class="main-content container">
       <div class="row">
         <div class="col-xs-12 main-content-col">
-          {{{ contents }}}
+          <h1 id="kvarn-5">Kvarn 5</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ante, molestie at gravida ac, pretium eget augue. Nulla non cursus quam. Fusce non turpis in est interdum viverra. Ut mollis pulvinar dolor at fringilla. Aliquam consectetur dui tincidunt nibh varius vestibulum. Aenean hendrerit nisl a mauris ultrices, ullamcorper blandit odio fermentum. Mauris justo justo, pellentesque ultrices varius in, posuere sit amet risus. Phasellus nibh purus, faucibus sed felis in, suscipit consectetur sapien. Vivamus bibendum finibus nisl, vel gravida diam efficitur ut. Praesent orci leo, vestibulum vel dui eget, posuere cursus risus. Morbi sit amet gravida lorem, ac hendrerit diam.</p>
+<p>Duis pretium mauris ac sollicitudin mollis. Proin et felis nec massa blandit porta. Donec lectus turpis, egestas vitae aliquam ac, scelerisque non sapien. Vivamus tincidunt auctor dolor. Maecenas scelerisque mi vel arcu commodo, vehicula posuere diam condimentum. Maecenas quis sem quis felis vulputate maximus. Proin ac nisi vitae libero scelerisque dignissim ut efficitur purus. Fusce ut vehicula dui. Nulla tempus tellus non congue vehicula. Vestibulum posuere molestie augue sit amet dictum. Donec viverra, eros sit amet feugiat dictum, tellus magna gravida risus, at sollicitudin augue orci vitae augue. Mauris viverra lectus nec pharetra luctus. Nullam sed odio tellus. Donec at massa vestibulum, imperdiet leo eget, vehicula nisl. Curabitur varius felis mi, quis mollis nisi tristique et. Vestibulum finibus dictum sem.</p>
+
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          {{#if next}}
           <p class="pull-right">
-            <a href="/{{next.url}}">{{next.title}}</a>
+            <a href="//projekt/hjelmsby/kvarnar/kvarn6">Kvarn 6</a>
           </p>
-          {{/if}}
-          {{#if previous}}
           <p>
-            <a href="/{{previous.url}}">{{previous.title}}</a>
-          <p/>
-          {{/if}}
-        </div>
+            <a href="//projekt/hjelmsby/kvarnar/kvarn4">Kvarn 4</a>
+          </p><p>
+        </p></div>
       </div>
     </div>
     <footer class="footer">
@@ -116,5 +89,6 @@
         });
       });
     </script>
-  </body>
-</html>
+  
+
+</body></html>

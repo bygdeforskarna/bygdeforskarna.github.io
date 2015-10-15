@@ -89,6 +89,9 @@ footer .container p {
   .banner {
     height: 460px;
   }
+  .front-page-news-col {
+    padding: 40px 40px;
+  }
 }
 @media (min-width: 992px) {
   .featurette-heading {

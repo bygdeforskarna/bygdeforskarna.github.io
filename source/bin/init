@@ -119,7 +119,7 @@ metalsmith
             if (filename === "blogg/index.html") {
                 $(".main-content-col").append("<hr class='row featurette-divider'>");
 
-                var archive = $("<div class='list-group'></div>");
+                var archive = $("<ul class='list-group'></ul>");
 
                 for (var i=0; i<metalsmith.metadata().blogposts.length; i++) {
                     var blogpost = metalsmith.metadata().blogposts[i];
@@ -146,8 +146,8 @@ metalsmith
                         $(".main-content-col").append("<hr class='row featurette-divider'>");
                     }
 
-                    archive.append($("<a class='list-group-item' href='/" + blogpost.url + "'>" + formatDateString(blogpost.date) +
-                                     " - " + blogpost.title + "</a>"));
+                    archive.append($("<li class='list-group-item'><a href='/" + blogpost.url + "'>" + formatDateString(blogpost.date) +
+                                     " - " + blogpost.title + "</a></li>"));
                 }
 
                 var archive

@@ -136,7 +136,7 @@ metalsmith
                         var textCol = $("<div class='col-md-7 featurette-text-box'></div>");
                         textCol.append($("<h2 class='featurette-heading'>" + blogpost.title + "</h2>"));
                         textCol.append($("<p class='lead'>" + blogpost.summary + "</p>"));
-                        textCol.append($("<a href='/" + blogpost.url + "'><button class='btn btn-default'>Läs mer</button></a>"));
+                        textCol.append($("<a href='" + blogpost.url + "'><button class='btn btn-default'>Läs mer</button></a>"));
                         var imgCol = $("<div class='col-md-5'></div>");
                         imgCol.append($("<img class='img-responsive b-lazy-one-size thumbnail' src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' data-src='" + blogpost.image + "' alt='" + blogpost.image_title + "' title='" + blogpost.image_alt + "'>"));
 
@@ -152,8 +152,7 @@ metalsmith
 
                         $(".main-content-col").append("<hr class='row featurette-divider'>");
                     }
-
-                    archive.append($("<li class='list-group-item'><a href='/" + blogpost.url + "'>" + formatDateString(blogpost.date) +
+                    archive.append($("<li class='list-group-item'><a href='" + blogpost.url + "'>" + formatDateString(blogpost.date) +
                                      " - " + blogpost.title + "</a></li>"));
                 }
 

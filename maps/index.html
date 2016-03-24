@@ -7,6 +7,7 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,11 +44,13 @@
       <div class="row">
         <div class="col-xs-12 main-content-col">
           <h1>Fun with maps</h1>
-          <div id="map">
-          </div>
-          <script>
-            
-          </script>
+<div id="map" style="height: 180px;"></div>
+<script>
+  function initMaps() {
+    var mymap = L.map("map").setView([51.505, -0.09], 13);
+  });
+</script>
+
         </div>
       </div>
       <div class="row">
@@ -68,8 +71,13 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/blazy/1.4.1/blazy.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script type="text/javascript">
       $(function () {
+        if (typeof(initMaps) == "function") {
+          initMaps();
+        }
+
         var bLazy3 = new Blazy({
           selector: ".b-lazy-three-sizes",
           breakpoints: [{
@@ -85,6 +93,6 @@
         });
       });
     </script>
-
+  
 
 </body></html>

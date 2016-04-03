@@ -56,7 +56,7 @@
     L.mapbox.accessToken = "pk.eyJ1IjoiZ29sZWVncmVlcyIsImEiOiJjaW02cnZ3aG0wMDAwd29rbnFud2Nob3o5In0.KAnEl2Tr3ywbrO1VaZRAXA";
     hjalm1840Layer = L.tileLayer("https://api.mapbox.com/v4/goleegrees.7fk72ysj/{z}/{x}/{y}.png?access_token=" + L.mapbox.accessToken);
 
-    map = L.mapbox.map("map", "mapbox.satellite", { zoomControl:false})
+    map = L.mapbox.map("map", "mapbox.satellite")
         .setView(new L.LatLng(57.494, 12.172),16);
 
     L.control.layers(null, { "Hjälm 1840":hjalm1840Layer }).addTo(map);

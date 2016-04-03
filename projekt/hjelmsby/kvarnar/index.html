@@ -7,6 +7,7 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -64,16 +65,16 @@ Duis pretium mauris ac sollicitudin mollis. Proin et felis nec massa blandit por
 
 <div class="col-md-4 col-xs-12 fancy-item">
 <img class="img-responsive thumbnail center-block b-lazy-one-size" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://farm9.staticflickr.com/8623/16449412778_05d764f0cb_n.jpg" alt="Två rosa ballonger som hänger ovanför en svart spegel." title="Ballonger ovanför spegel">
-<h2>Kvarn 3</h2>
+<h2>Kvarn 4</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci quam, iaculis eget urna in, molestie dignissim ipsum. Ut erat est, egestas ac libero eu, viverra elementum nisl.</p>
-<a href="/projekt/hjelmsby/kvarnar/kvarn3"><button class="btn btn-default">Mer information</button></a>
+<a href="/projekt/hjelmsby/kvarnar/kvarn4"><button class="btn btn-default">Mer information</button></a>
 </div>
 
 <div class="col-md-4 col-xs-12 fancy-item">
 <img class="img-responsive thumbnail center-block b-lazy-one-size" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://farm9.staticflickr.com/8623/16449412778_05d764f0cb_n.jpg" alt="Två rosa ballonger som hänger ovanför en svart spegel." title="Ballonger ovanför spegel">
-<h2>Kvarn 4</h2>
+<h2>Kvarn 3</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci quam, iaculis eget urna in, molestie dignissim ipsum. Ut erat est, egestas ac libero eu, viverra elementum nisl.</p>
-<a href="/projekt/hjelmsby/kvarnar/kvarn4"><button class="btn btn-default">Mer information</button></a>
+<a href="/projekt/hjelmsby/kvarnar/kvarn3"><button class="btn btn-default">Mer information</button></a>
 </div>
 
 <div class="col-md-4 col-xs-12 fancy-item">
@@ -124,8 +125,13 @@ Duis pretium mauris ac sollicitudin mollis. Proin et felis nec massa blandit por
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/blazy/1.4.1/blazy.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js"></script>
     <script type="text/javascript">
       $(function () {
+        if (typeof(initMaps) == "function") {
+          initMaps();
+        }
+
         var bLazy3 = new Blazy({
           selector: ".b-lazy-three-sizes",
           breakpoints: [{
